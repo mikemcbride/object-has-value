@@ -1,6 +1,6 @@
 {
   "name": "object-has-value",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Function to test whether an object contains the specified value",
   "main": "index.js",
   "files": ["index.js"],
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/mikemcbride/object-has-value.git"
+    "url": "https://github.com/mikemcbride/object-has-value"
   },
   "keywords": [
     "javascript"
