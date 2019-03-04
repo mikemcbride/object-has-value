@@ -1,9 +1,11 @@
 {
   "name": "object-has-value",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Function to test whether an object contains the specified value",
   "main": "index.js",
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "lint": "prettier --single-quote --no-semi --write ./*.js",
     "test": "jest"
