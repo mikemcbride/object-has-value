@@ -1,4 +1,4 @@
-module.exports = function(obj, term) {
+function objectHasValue(obj, term) {
   for (let prop in obj) {
     // loop through every property in the object
     if (obj.hasOwnProperty(prop) && !!obj[prop]) {
@@ -48,3 +48,5 @@ function arrayContainsValue(arr, val) {
     return false
   })
 }
+
+module.exports = objectHasValue
