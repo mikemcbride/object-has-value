@@ -93,6 +93,6 @@ test('filters arrays of objects', () => {
 
 test('recursively filters if property is an object', () => {
   let users = [mike, dan]
-  let filtered = users.filter(it => objectHasValue(it, '555'))
+  let filtered = users.filter(it => objectHasValue(it, '6666'))
   expect(filtered.length).toBe(2)
 })
