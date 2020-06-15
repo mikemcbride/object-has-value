@@ -1,7 +1,7 @@
 function objectHasValue(obj, term) {
   for (let prop in obj) {
     // loop through every property in the object
-    if (obj.hasOwnProperty(prop) && !!obj[prop]) {
+    if (Object.prototype.hasOwnProperty.call(obj, prop) && !!obj[prop]) {
       const thisProp = obj[prop]
 
       if (isObject(thisProp)) {
