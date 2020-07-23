@@ -1,6 +1,6 @@
 {
   "name": "object-has-value",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Function to test whether an object contains the specified value",
   "main": "index.js",
   "files": [
