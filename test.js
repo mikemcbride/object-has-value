@@ -1,4 +1,6 @@
-const objectHasValue = require('./index.js')
+const { test } = require('uvu')
+const assert = require('uvu/assert')
+const objectHasValue = require('./index')
 
 // setup
 const kitten = {
@@ -70,29 +72,31 @@ const dan = {
 
 // tests
 test('returns true if the object has a value matching the search term', () => {
-  expect(objectHasValue(kitten, 'cat')).toBe(true)
+  assert.is(objectHasValue(kitten, 'cat'), true)
 })
 
 test('returns false if the object does not have a value matching the search term', () => {
-  expect(objectHasValue(kitten, 'dog')).toBe(false)
+  assert.is(objectHasValue(kitten, 'dog'), false)
 })
 
 test('handles case insensitive values', () => {
-  expect(objectHasValue(kitten, 'fluffy')).toBe(true)
+  assert.is(objectHasValue(kitten, 'fluffy'), true)
 })
 
 test('handles partial matches', () => {
-  expect(objectHasValue(kitten, 'flu')).toBe(true)
+  assert.is(objectHasValue(kitten, 'flu'), true)
 })
 
 test('filters arrays of objects', () => {
   let arr = [kitten, puppy]
   let filtered = arr.filter(it => objectHasValue(it, 'Mike'))
-  expect(filtered.length).toBe(2)
+  assert.is(filtered.length, 2)
 })
 
 test('recursively filters if property is an object', () => {
   let users = [mike, dan]
   let filtered = users.filter(it => objectHasValue(it, '6666'))
-  expect(filtered.length).toBe(2)
+  assert.is(filtered.length, 2)
 })
+
+test.run()
