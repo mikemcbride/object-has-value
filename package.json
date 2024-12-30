@@ -4,8 +4,10 @@
   "description": "Function to test whether an object contains the specified value",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "types/index.d.ts"
   ],
+  "types": "types/index.d.ts",
   "scripts": {
     "lint": "prettier --single-quote --no-semi --write ./*.js",
     "test": "uvu"
