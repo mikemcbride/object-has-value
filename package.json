@@ -1,6 +1,6 @@
 {
   "name": "object-has-value",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Efficiently test whether an object contains the specified value",
   "type": "module",
   "files": [
