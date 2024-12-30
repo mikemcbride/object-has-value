@@ -27,5 +27,5 @@ function u(e, r) {
   });
 }
 export {
-  o as default
+  o as objectHasValue
 };
