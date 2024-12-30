@@ -4,7 +4,7 @@ This function takes two arguments - an object and a search term (`String`) - and
 
 ## Why?
 
-In many front-end applications, I find myself needing an efficient function to test whether an object contains a search term. Many implementations I've seen do something simple like converting the object to a string and testing for a match on the string, but then you tend to get some false positives, for things like object **properties**, when in reality you likely only want to test whether the object has a **value** matching your term. I built this with optimal filtering performance in mind.
+In many applications, I find myself needing an efficient function to test whether an object contains a search term. Many implementations I've seen do something simple like converting the object to a string and testing for a match on the string, but then you tend to get some false positives for things like object **properties**, when in reality you likely only want to test whether the object has a **value** matching your term. So I built this with optimal filtering performance in mind.
 
 ## What it does
 
@@ -18,7 +18,7 @@ If a value is an object, it will recursively test that object's values.
 
 If a value is an array, it will check each item in the array. If it encounters an object, it will again recursively test that object's values.
 
-As soon as it encounters a match, it returns `true`, for optimal performance.
+As soon as it encounters a match, it stops checking and returns `true`, for optimal performance.
 
 ## Usage
 

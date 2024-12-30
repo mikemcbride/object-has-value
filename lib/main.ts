@@ -1,4 +1,12 @@
-function objectHasValue(obj, term) {
+// using `object` for the obj parameter throws a TS error for implicit 'any'.
+// however, the whole point of this is that the object we're checking can be anything.
+// rather than using 'any' as the type, we want to be explicit that is is an Object,
+// but we simply do not care what the shape of that object is.
+type FlexibleObject = {
+  [key: string]: any
+}
+
+export default function objectHasValue(obj: FlexibleObject, term: any): boolean {
   for (let prop in obj) {
     // loop through every property in the object
     if (Object.prototype.hasOwnProperty.call(obj, prop) && !!obj[prop]) {
@@ -26,11 +34,11 @@ function objectHasValue(obj, term) {
   return false
 }
 
-function isObject(x) {
+function isObject(x: FlexibleObject) {
   return Object.prototype.toString.call(x) === '[object Object]'
 }
 
-function arrayContainsValue(arr, val) {
+function arrayContainsValue(arr: Array<any>, val: any) {
   val = val.toLowerCase()
   return arr.some(el => {
     if (isObject(el)) {
@@ -49,4 +57,3 @@ function arrayContainsValue(arr, val) {
   })
 }
 
-module.exports = objectHasValue
