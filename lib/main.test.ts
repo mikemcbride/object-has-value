@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import objectHasValue from './main';
+import { objectHasValue } from './main';
 import * as data from '../tests/fixtures';
 
 // tests

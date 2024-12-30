@@ -27,7 +27,7 @@ Can be used as a standalone function or as a function inside `Array.filter`.
 ### Standalone
 
 ```js
-import objectHasValue from 'object-has-value'
+import { objectHasValue } from 'object-has-value'
 
 const someObject = {
   ...
@@ -39,7 +39,7 @@ const hasValue = objectHasValue(someObject, 'your search term') // true/false
 ### `Array.filter`
 
 ```js
-import objectHasValue from 'object-has-value'
+import { objectHasValue } from 'object-has-value'
 
 const someArray = [...]
 

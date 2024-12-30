@@ -6,7 +6,7 @@ type FlexibleObject = {
   [key: string]: any
 }
 
-export default function objectHasValue(obj: FlexibleObject, term: any): boolean {
+export function objectHasValue(obj: FlexibleObject, term: any): boolean {
   for (let prop in obj) {
     // loop through every property in the object
     if (Object.prototype.hasOwnProperty.call(obj, prop) && !!obj[prop]) {
