@@ -1,28 +1,28 @@
 {
   "name": "object-has-value",
-  "version": "1.1.0",
-  "description": "Function to test whether an object contains the specified value",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "files": [
-    "index.js",
-    "types/index.d.ts"
+    "dist",
+    "index.d.ts"
   ],
-  "types": "types/index.d.ts",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.umd.cjs"
+  },
   "scripts": {
-    "lint": "prettier --single-quote --no-semi --write ./*.js",
-    "test": "uvu"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest run"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mikemcbride/object-has-value"
-  },
-  "keywords": [
-    "javascript"
-  ],
-  "author": "mikemcbride",
-  "license": "MIT",
   "devDependencies": {
-    "prettier": "1.15.2",
-    "uvu": "^0.3.0"
+    "typescript": "~5.7.2",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.8"
   }
 }
